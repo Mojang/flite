@@ -144,7 +144,9 @@ cst_voice *flite_voice_select(const char *name)
     {
         voice = flite_voice_load(name);
         if (!voice)
-            cst_errmsg("Error load voice: failed to load voice from %s\n",name);        flite_add_voice(voice);
+            cst_errmsg("Error load voice: failed to load voice from %s\n",name);        
+        
+        flite_add_voice(voice);
         return voice;
     }
 
